@@ -1,16 +1,68 @@
-
 <!doctype html>
-<html lang="en" ng-app="lightBox">
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Lightbox</title>
-	
+	<title>Front End Assignment</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="css/styles.css" media="all" rel="stylesheet" />
+	<style>
+		.graph {
+                width:auto;
+				max-width: 100%;
+                height: 30px;
+                border: 1px solid #888; 
+                background: rgb(168,168,168);
+                background: -moz-linear-gradient(top, rgba(168,168,168,1) 0%, rgba(204,204,204,1) 23%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(168,168,168,1)), color-stop(23%,rgba(204,204,204,1)));
+                background: -webkit-linear-gradient(top, rgba(168,168,168,1) 0%,rgba(204,204,204,1) 23%);
+                background: -o-linear-gradient(top, rgba(168,168,168,1) 0%,rgba(204,204,204,1) 23%);
+                background: -ms-linear-gradient(top, rgba(168,168,168,1) 0%,rgba(204,204,204,1) 23%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a8a8', endColorstr='#cccccc',GradientType=0 );
+                background: linear-gradient(top, rgba(168,168,168,1) 0%,rgba(204,204,204,1) 23%);
+                position: relative;
+            }
+			.bar {
+                height: 29px; /* Not 30px because the 1px top-border brings it up to 30px to match #graph */
+                background: rgb(255,197,120); 
+                background: -moz-linear-gradient(top, rgba(255,197,120,1) 0%, rgba(244,128,38,1) 100%); 
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,197,120,1)), color-stop(100%,rgba(244,128,38,1))); 
+                background: -webkit-linear-gradient(top, rgba(255,197,120,1) 0%,rgba(244,128,38,1) 100%); 
+                background: -o-linear-gradient(top, rgba(255,197,120,1) 0%,rgba(244,128,38,1) 100%); 
+                background: -ms-linear-gradient(top, rgba(255,197,120,1) 0%,rgba(244,128,38,1) 100%); 
+                background: linear-gradient(top, rgba(255,197,120,1) 0%,rgba(244,128,38,1) 100%); 
+                border-top: 1px solid #fceabb;
+            }
+            .bar p { position: absolute; text-align: center; width: 100%; margin: 0; line-height: 30px; }    
+		.center {
+			margin: 0 auto;
+			width: 80%;
+		}			
+	</style>
 	
 </head>
   <body>
+	<div class="container-fluid center">
+	<div class="row">
+		<div class="" id="barContainer">
+		</div>
+	</div>
+	<div class="row">
+	<div class="col-sm-4 col-md-4 col-lg-2" >
+		<select id="progressSel">
+		</select>
+	</div>
+		<div class="col-sm-8 col-md-8 col-lg-8" id="btnBarContainer"></div>	
+	</div>
+	</div>
+  
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+	console.log(obj.buttons[0]);
+	console.log(obj.bars[0]);
+	console.log(obj.limit);
+  </script>
   </body>
 </html>
