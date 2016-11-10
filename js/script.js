@@ -50,7 +50,8 @@ function move(that) {
 	var wid = (document.getElementById(selId).style.width).split('%')[0];
 	var disLbl=parseInt(selPara.getAttribute("data-value"));
 	pos+= Number(wid);
-	disLbl += parseInt(selPara.getAttribute("data-value"))+parseInt(that.value);//+parseInt(that.value);
+	var tWid;
+	disLbl = tWid + parseInt(that.value);//+parseInt(that.value);
 	console.log("disLbl "+disLbl)
 	
 	if(pos < 0){
@@ -58,7 +59,8 @@ function move(that) {
 	}
 	selPara.innerHTML = pos+'%';
 	if(pos >100){
-		pos = 100;
+		//tWid = pos;
+		//pos = 100;
 		document.getElementById(selId).style.background = "red";
 	}
 	if(pos < 100){
